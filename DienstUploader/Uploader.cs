@@ -154,8 +154,6 @@ namespace DienstUploader {
                 lblFound.ForeColor = Color.Green;
                 lblBestand.Text = currentFile;
             }
-
-
         }
 
     }
