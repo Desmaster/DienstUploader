@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DienstUploader", "DienstUploader\DienstUploader.csproj", "{FEA1C2E8-C8DF-400D-B4FE-B7F3AB09B26A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEA1C2E8-C8DF-400D-B4FE-B7F3AB09B26A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEA1C2E8-C8DF-400D-B4FE-B7F3AB09B26A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEA1C2E8-C8DF-400D-B4FE-B7F3AB09B26A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEA1C2E8-C8DF-400D-B4FE-B7F3AB09B26A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
