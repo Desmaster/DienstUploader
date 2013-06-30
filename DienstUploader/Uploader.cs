@@ -40,8 +40,8 @@ namespace DienstUploader {
                     string soort = getSoort();
                     string filename = soort + datum;
                     string oldFile = currentFile;
-                    string uploadedDir = directory + "uploaded";
-                    string uploadedDirFile = directory + @"uploaded\";
+                    string uploadedDir = directory + @"\uploaded";
+                    string uploadedDirFile = directory + @"\uploaded\";
 
                     filename = filename.Replace("-", "");
 
@@ -54,10 +54,6 @@ namespace DienstUploader {
                     currentFile = uploadedDirFile + filename + "." + extension;
 
                     ftp.upload("Test/" + filename + "." + extension, currentFile);
-
-                    //if (ckbxVerwijder.Checked) {
-                    //    File.Delete(currentFile);
-                    //}
 
                     ftp = null;
 
@@ -106,10 +102,18 @@ namespace DienstUploader {
                 lblFound.Text = "Opnamebestand gevonden!";
                 lblFound.ForeColor = Color.Green;
                 lblBestand.Text = currentFile;
+                updateFile();
             } else {
                 lblFound.Text = "Geen opnamebestand gevonden!";
                 lblFound.ForeColor = Color.Red;
                 lblBestand.Text = "Geen bestand";
+            }
+        }
+
+        private void updateFile() {
+            int maxLength = 28;
+            if (lblBestand.Text.Length > maxLength) {
+                lblBestand.Text = lblBestand.Text.Substring(0, maxLength) + "...";
             }
         }
 
@@ -153,7 +157,21 @@ namespace DienstUploader {
                 lblFound.Text = "Opnamebestand gekozen!";
                 lblFound.ForeColor = Color.Green;
                 lblBestand.Text = currentFile;
+                updateFile();
             }
+        }
+
+        private void lblBestand_Click(object sender, EventArgs e) {
+            string argument = @"/select, " + currentFile;
+            Process.Start("explorer.exe", argument);
+        }
+
+        private void lblBestand_MouseHover(object sender, EventArgs e) {
+            Cursor = Cursors.Hand;
+        }
+
+        private void lblBestand_MouseLeave(object sender, EventArgs e) {
+            Cursor = Cursors.Default;
         }
 
     }

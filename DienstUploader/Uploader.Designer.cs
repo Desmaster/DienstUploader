@@ -150,6 +150,9 @@
             this.lblBestand.Size = new System.Drawing.Size(76, 15);
             this.lblBestand.TabIndex = 6;
             this.lblBestand.Text = "Geen bestand";
+            this.lblBestand.Click += new System.EventHandler(this.lblBestand_Click);
+            this.lblBestand.MouseLeave += new System.EventHandler(this.lblBestand_MouseLeave);
+            this.lblBestand.MouseHover += new System.EventHandler(this.lblBestand_MouseHover);
             // 
             // label4
             // 
@@ -221,7 +224,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gbSoortDienst);
             this.Controls.Add(this.btnUpload);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmUploader";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dienst Uploader";
